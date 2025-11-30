@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D website by html and css</title>
+    <link rel="stylesheet" href="style.css">
+     <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+</head>
+
+<body>
+    <img class="gradient" src="Black gradient.jpeg" alt="">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>MIRZA'S</h1>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <a href="#">Company</a>
+                    <a href="#">Features</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Documents</a>
+                </nav>
+            </div>
+
+            <div>
+                <button class="sign-in">Sign in</button>
+            </div>
+        </header>
+    </div>
+    <!-- main content -->
+    <main>
+        <div class="content">
+            <div class="animated-btn">
+                <div class="animated">Instructing</div>
+            </div>
+            <div class="text">
+                <h2>ENAIL FOR <br>Developers</h2>
+            </div>
+            <div class="description">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Quam fugit animi nam adipisci et quo,
+                 dolorum, esse quosbr <br> totam natus libero optio deserunt voluptatum.
+                </p>
+            </div>
+            <div class="btns">
+                <span class="btn-2">Documentations &gt;</span>
+                <span class="btn-3">Get Started &gt;</span>
+            </div>
+        </div>
+        <!-- 3D MODEL  -->
+      <spline-viewer 
+        class="robot-3d" url="https://prod.spline.design/UW-zXdpYKDyDsZou/scene.splinecode"
+        style="width:100vw; height:100vh;">
+      </spline-viewer>
+    </main>
+</body>
+</html>

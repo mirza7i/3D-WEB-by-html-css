@@ -1,0 +1,260 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+    font-family: system-ui,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: rgb(170, 170, 170);
+}
+
+.gradient {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+nav h1 {
+    font-size: 3rem;
+}
+
+a{
+    color: rgb(170, 170, 170);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: rgb(81, 78, 78);
+    text-decoration: underline;
+}
+
+/* Sign-btn */
+.sign-in {
+    padding: 0.5rem;
+    width: 7rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sign-in:hover {
+    background-color: rgb(52, 53, 54);
+}
+
+
+/* main content */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content {
+    max-width: 40rem;
+    margin-left: 10%;
+    margin-top: 10%;
+    z-index: 999;
+}
+
+/* animatd button */
+.animated-btn {
+    position: relative;
+    width: 20rem;
+    height: 1.5rem;
+    padding: 1.2rem;
+    margin: 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 1rem;
+    color: rgb(250, 243, 243);
+    background: linear-gradient(to right, red, blue, purple, yellow, green);
+    background-size: 200%;
+    animation: animation-gradient 2.5s infinite linear;
+    box-shadow: 0 0 15px gray;
+    cursor: pointer;
+}
+
+@keyframes animation-gradient {
+    to {
+        background-position: 200%;
+    }
+
+}
+
+.animated-btn .animated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 3rem;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 2rem;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.animated:hover {
+    color: blueviolet;
+}
+
+/* ---- */
+
+/* Heading */
+.text h2 {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px grey;
+    margin: 2rem;
+}
+
+/* Paragraph */
+.description {
+    margin: 2rem;
+    font-size: 1.2rem;
+    max-width: 35rem;
+    color: grey;
+}
+
+/* Buttons */
+.btn-2,
+.btn-3 {
+    padding: 1rem;
+    width: 12rem;
+    height: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid rgb(16, 15, 15);
+    margin: 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+.btn-2 {
+    background-color: rgb(26, 24, 24);
+    color: navy;
+    cursor: pointer;
+}
+
+.btn-2:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+.btn-3 {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-3:hover:hover {
+    background-color: rgb(140, 136, 136);
+}
+.robot-3d{
+    position: absolute;
+    top: 0px;
+    right: -20%;
+}
+
+/* ------ */
+
+
+/* media queries for responsiveness "Tablets" */
+@media (max-width:1024) {
+    header{
+        padding: 1rem 0.5rem;
+    }
+    .content{
+        margin-top: 85%;
+        font-size: 2rem;
+        /* margin-left: 1rem; */
+    }
+    .robot-3d{
+        scale: 0.8;
+        top:-20%;
+        right:2%;
+        border: none;
+    }
+    
+}
+/* media queries for responsiveness "Mobiles" */
+@media (max-width:600px){
+    header{
+        padding: 1rem 0.2rem;
+    }
+    nav{display: none;}
+    header h1{
+        font-size: 2.5rem;
+    }
+    .sign-in{
+        padding: 0.5rem 1.5rem;
+    }
+    .content{
+        margin-top: 22rem;
+        max-width: 25rem;
+    }
+    .animated-btn{
+        width: 10rem;
+        font-size: 0.8rem;
+    }
+    .text{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    .btn-2{
+        width: 10rem;
+        font-size: 0.8rem;
+    }
+    .btn-3{
+        width: 10rem;
+        font-size: 0.8rem;
+    }
+    .robot-3d{
+        scale: 0.5;
+        top: 25%;
+        right: 0%;
+        border: none;
+    }
+
+}
